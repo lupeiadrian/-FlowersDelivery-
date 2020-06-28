@@ -323,7 +323,7 @@ public class Register extends JFrame {
 		txtLogin.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				Login_Register rgf = new Login_Register();
+				Login rgf = new Login();
 				rgf.setVisible(true);
 				rgf.pack();
 				rgf.setLocationRelativeTo(null);

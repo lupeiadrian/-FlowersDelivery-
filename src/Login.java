@@ -87,32 +87,8 @@ public class Login extends JFrame {
 		
 	}
 	
-	void addData(String usr, String pswd, String mail, String name, String phone, String type) {
-		try {
-			RandomAccessFile raf = new RandomAccessFile(f+"\\logins.txt","rw");
-			for(int i=0;i<ln;i++) {
-				raf.readLine();
-			}
-			if(ln>0){
-	            raf.writeBytes("\r\n");
-	            raf.writeBytes("\r\n");
-	            }
-			raf.writeBytes("Username:"+usr+ "\r\n");
-			raf.writeBytes("Password:"+pswd+ "\r\n");
-			raf.writeBytes("Email:"+mail+ "\r\n");
-			raf.writeBytes("Name:"+name+ "\r\n");
-			raf.writeBytes("Phone:"+phone+ "\r\n");
-			raf.writeBytes("Type:"+type + "\r\n");
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-
-	void checkData(String usr, String pswd) {
+	
+	 void checkData(String usr, String pswd) {
 		try {
 			RandomAccessFile raf = new RandomAccessFile (f+"\\logins.txt","rw");
 			String line = raf.readLine();

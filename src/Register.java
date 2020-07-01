@@ -114,29 +114,6 @@ public class Register extends JFrame {
 		}
 	}
 
-	void checkData(String usr, String pswd) {
-		try {
-			RandomAccessFile raf = new RandomAccessFile (f+"\\logins.txt","rw");
-			String line = raf.readLine();
-			Username=line.substring(9);
-			Password=raf.readLine().substring(9);
-			Email=raf.readLine().substring(6);
-			Name=raf.readLine().substring(5);
-			Phone=raf.readLine().substring(6);
-			Type=raf.readLine().substring(5);
-			if(usr.equals(Username) & pswd.equals(Password)) {
-				JOptionPane.showMessageDialog(null, "Parola Potrivita!");
-			}else {
-				JOptionPane.showMessageDialog(null, "Parola/Nume Gresit!");
-			}
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}  
-	}
 	 
 	void checkRegister(String usr) {
 			try {
